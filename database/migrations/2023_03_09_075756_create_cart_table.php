@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasTable('users')) {
+        if (!Schema::hasTable('cart')) {
             Schema::create('cart', function (Blueprint $table) {
                 $table->id();
                 $table->integer('product_id');
                 $table->integer('user_id');
+                $table->integer('weight')->after('user_id');
+                $table->integer('quantity')->after('weight');
                 $table->timestamps();
             });
         }
