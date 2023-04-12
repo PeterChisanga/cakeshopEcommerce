@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+
 <div class="container custom-login">
     <div class="col-sm-4 col-sm-offset-4">
       @if ($errors != null)

@@ -16,8 +16,7 @@ return new class extends Migration
                 $table->id();
                 $table->integer('product_id');
                 $table->integer('user_id');
-                $table->integer('weight')->after('user_id');
-                $table->integer('quantity')->after('weight');
+                $table->integer('price');
                 $table->timestamps();
             });
         }
